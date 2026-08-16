@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SPARCS 2022 Healthcare Inpatient Discharge Analytics | Itumeleng Kocha</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f9f8;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 30px 8%;
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin-right: 20px;
+            color: #00796b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 8%;
+        }
+
+        .back {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .label {
+            margin-top: 35px;
+            color: #00796b;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 44px;
+            line-height: 1.15;
+            margin: 10px 0 20px;
+        }
+
+        .intro {
+            font-size: 19px;
+            color: #546e7a;
+            max-width: 800px;
+        }
+
+        .tools {
+            margin: 25px 0 45px;
+        }
+
+        .tool {
+            display: inline-block;
+            background: white;
+            border: 1px solid #dce5e3;
+            border-radius: 20px;
+            padding: 7px 14px;
+            margin: 5px 5px 5px 0;
+            font-size: 14px;
+        }
+
+        section {
+            background: white;
+            padding: 35px;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 1px solid #e5eae8;
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: #263238;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin: 30px 0;
+        }
+
+        .stat {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #dce5e3;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 28px;
+            color: #00796b;
+        }
+
+        .stat span {
+            color: #607d8b;
+            font-size: 14px;
+        }
+
+        .finding {
+            margin: 25px 0;
+        }
+
+        .finding h3 {
+            margin-bottom: 5px;
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .step {
+            padding: 20px;
+            background: #f7f9f8;
+            border-radius: 10px;
+        }
+
+        .step-number {
+            color: #00796b;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .github-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #263238;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            background: white;
+            color: #607d8b;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        @media (max-width: 750px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .stats,
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Itumeleng Kocha</h2>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#learning">Learning</a>
+        <a href="../index.html#about">About</a>
+    </nav>
+</header>
+
+<main>
+
+    <a class="back" href="../index.html#work">
+        ← Back to Projects
+    </a>
+
+    <div class="label">Healthcare Analytics Project</div>
+
+    <h1>SPARCS 2022 Healthcare Inpatient Discharge Analytics</h1>
+
+    <p class="intro">
+        A Python and Pandas analysis of more than 2.1 million New York State
+        hospital inpatient discharge records, exploring patient demographics,
+        healthcare utilization, clinical patterns and financial indicators.
+    </p>
+
+    <div class="tools">
+        <span class="tool">Python</span>
+        <span class="tool">Pandas</span>
+        <span class="tool">NumPy</span>
+        <span class="tool">Matplotlib</span>
+        <span class="tool">Jupyter Notebook</span>
+    </div>
+
+    <div class="stats">
+
+        <div class="stat">
+            <strong>2.1M+</strong>
+            <span>Inpatient discharge records</span>
+        </div>
+
+        <div class="stat">
+            <strong>33</strong>
+            <span>Dataset columns</span>
+        </div>
+
+        <div class="stat">
+            <strong>2022</strong>
+            <span>SPARCS dataset year</span>
+        </div>
+
+    </div>
+
+    <section>
+
+        <h2>Project Overview</h2>
+
+        <p>
+            I worked with the 2022 New York State SPARCS Hospital Inpatient
+            Discharges dataset. The dataset contained 2,103,433 records and
+            33 columns.
+        </p>
+
+        <p>
+            The project gave me an opportunity to practise working with a
+            large healthcare dataset using Python and Pandas, from initial
+            inspection and data preparation through descriptive analysis
+            and visualization.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>What I Analysed</h2>
+
+        <ul>
+            <li>Patient demographics</li>
+            <li>Hospital and geographic utilization</li>
+            <li>Admission and emergency-care patterns</li>
+            <li>Clinical severity and outcomes</li>
+            <li>Diagnosis and procedure utilization</li>
+            <li>Length of stay</li>
+            <li>Total charges and total costs</li>
+            <li>Primary payer mix</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Data Preparation</h2>
+
+        <p>
+            The original Length of Stay field was stored as text. I created
+            a separate numeric version for analysis and converted values
+            recorded as <strong>120 +</strong> or <strong>120+</strong> to
+            120.
+        </p>
+
+        <p>
+            I also created numeric versions of Total Charges and Total Costs
+            rather than overwriting the original fields.
+        </p>
+
+        <p>
+            After preparation, the Length of Stay, Total Charges and Total
+            Costs analytical fields contained no missing values.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Key Findings</h2>
+
+        <div class="finding">
+
+            <h3>Age distribution</h3>
+
+            <p>
+                Patients aged <strong>70 or Older</strong> represented the
+                largest age group, accounting for <strong>30.63%</strong> of
+                inpatient discharges. The 50 to 69 age group followed at
+                <strong>26.92%</strong>.
+            </p>
+
+        </div>
+
+        <div class="finding">
+
+            <h3>Healthcare utilization</h3>
+
+            <p>
+                I examined inpatient discharge patterns across hospital
+                service areas, counties and facilities to explore geographic
+                differences in hospital utilization.
+            </p>
+
+        </div>
+
+        <div class="finding">
+
+            <h3>Clinical patterns</h3>
+
+            <p>
+                I explored severity of illness, risk of mortality,
+                medical/surgical classification and patient disposition to
+                understand patterns within the inpatient population.
+            </p>
+
+        </div>
+
+        <div class="finding">
+
+            <h3>Financial indicators</h3>
+
+            <p>
+                I analysed Total Charges and Total Costs and calculated a
+                charge-to-cost ratio to explore the relationship between
+                reported hospital charges and costs.
+            </p>
+
+        </div>
+
+        <div class="finding">
+
+            <h3>Payer mix</h3>
+
+            <p>
+                I examined primary payment typology to understand the
+                distribution of payer types across inpatient records.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>My Analytics Workflow</h2>
+
+        <div class="workflow">
+
+            <div class="step">
+                <div class="step-number">01 — INSPECT</div>
+                <p>
+                    Loaded the dataset and examined its structure, columns
+                    and data types.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02 — PREPARE</div>
+                <p>
+                    Cleaned analytical variables and created numeric fields
+                    for length of stay and financial analysis.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03 — ANALYSE</div>
+                <p>
+                    Used Pandas to group, aggregate and explore healthcare
+                    utilization and financial patterns.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">04 — VISUALIZE</div>
+                <p>
+                    Created visualizations to communicate patterns found
+                    during the analysis.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>What I Practised</h2>
+
+        <ul>
+            <li>Working with a large healthcare dataset</li>
+            <li>Data-quality assessment</li>
+            <li>Investigating missing values</li>
+            <li>Checking for duplicate records</li>
+            <li>Cleaning analytical variables</li>
+            <li>Creating descriptive statistics</li>
+            <li>Calculating percentages and percentiles</li>
+            <li>Grouping and aggregating healthcare data</li>
+            <li>Creating data visualizations</li>
+            <li>Interpreting healthcare utilization and financial indicators</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Limitations</h2>
+
+        <p>
+            The Length of Stay field includes records reported as
+            <strong>120+</strong>. These values were converted to 120 for
+            numerical analysis, so the actual length of stay for those
+            records may be higher.
+        </p>
+
+        <p>
+            Total Charges and Total Costs are reported healthcare financial
+            fields. They should not automatically be interpreted as actual
+            reimbursement, collected revenue or hospital profit.
+        </p>
+
+        <p>
+            The analysis is descriptive and is intended to explore patterns
+            in the dataset rather than establish causal relationships.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>What I Learned</h2>
+
+        <p>
+            This project helped me practise working through a large
+            healthcare dataset using Python and Pandas.
+        </p>
+
+        <p>
+            It strengthened my experience with data preparation, descriptive
+            analysis, healthcare utilization analysis, financial data
+            analysis and visualization.
+        </p>
+
+        <p>
+            It also gave me practical experience working with healthcare
+            concepts such as inpatient discharges, length of stay, severity
+            of illness, risk of mortality, diagnoses, procedures and payer
+            types.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Project Repository</h2>
+
+        <p>
+            The complete Python notebook and project documentation are
+            available on GitHub.
+        </p>
+
+        <a
+            class="github-button"
+            href="https://github.com/ItumelengKocha/sparcs-healthcare-analytics"
+            target="_blank"
+        >
+            View on GitHub →
+        </a>
+
+    </section>
+
+</main>
+
+<footer>
+    Itumeleng Kocha
+    <br>
+    Healthcare • Data • Learning • Life
+</footer>
+
+</body>
+</html>
