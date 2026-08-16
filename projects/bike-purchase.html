@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Purchasing Behaviour & Demographics Analysis | Itumeleng Kocha</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f9f8;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 30px 8%;
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin-right: 20px;
+            color: #00796b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 8%;
+        }
+
+        .back {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .label {
+            margin-top: 35px;
+            color: #00796b;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 44px;
+            line-height: 1.15;
+            margin: 10px 0 20px;
+        }
+
+        .intro {
+            font-size: 19px;
+            color: #546e7a;
+            max-width: 800px;
+        }
+
+        .tools {
+            margin: 25px 0 45px;
+        }
+
+        .tool {
+            display: inline-block;
+            background: white;
+            border: 1px solid #dce5e3;
+            border-radius: 20px;
+            padding: 7px 14px;
+            margin: 5px 5px 5px 0;
+            font-size: 14px;
+        }
+
+        section {
+            background: white;
+            padding: 35px;
+            margin: 30px 0;
+            border-radius: 12px;
+            border: 1px solid #e5eae8;
+        }
+
+        section h2 {
+            margin-top: 0;
+            color: #263238;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin: 30px 0;
+        }
+
+        .stat {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #dce5e3;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 28px;
+            color: #00796b;
+        }
+
+        .stat span {
+            color: #607d8b;
+            font-size: 14px;
+        }
+
+        .finding {
+            margin: 25px 0;
+        }
+
+        .finding h3 {
+            margin-bottom: 5px;
+        }
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .step {
+            padding: 20px;
+            background: #f7f9f8;
+            border-radius: 10px;
+        }
+
+        .step-number {
+            color: #00796b;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .github-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #263238;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            background: white;
+            color: #607d8b;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        @media (max-width: 750px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .stats,
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Itumeleng Kocha</h2>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#learning">Learning</a>
+        <a href="../index.html#about">About</a>
+    </nav>
+</header>
+
+<main>
+
+    <a class="back" href="../index.html#work">
+        ← Back to Projects
+    </a>
+
+    <div class="label">Excel Data Analytics Project</div>
+
+    <h1>Customer Purchasing Behaviour & Demographics Analysis</h1>
+
+    <p class="intro">
+        An Excel-based analysis exploring customer purchasing behaviour
+        across income, commute distance, age, region and occupation,
+        culminating in an interactive dashboard.
+    </p>
+
+    <div class="tools">
+        <span class="tool">Microsoft Excel</span>
+        <span class="tool">Data Cleaning</span>
+        <span class="tool">Conditional Logic</span>
+        <span class="tool">Pivot Tables</span>
+        <span class="tool">Slicers</span>
+        <span class="tool">Dashboard</span>
+    </div>
+
+    <div class="stats">
+
+        <div class="stat">
+            <strong>1,026</strong>
+            <span>Customer records in source dataset</span>
+        </div>
+
+        <div class="stat">
+            <strong>4</strong>
+            <span>Workbook analysis sheets</span>
+        </div>
+
+        <div class="stat">
+            <strong>44.3%</strong>
+            <span>Purchase rate for the Middle Age group</span>
+        </div>
+
+    </div>
+
+    <section>
+
+        <h2>Project Overview</h2>
+
+        <p>
+            I worked with a customer purchasing dataset containing
+            demographic, income, commute, occupation, regional and
+            bicycle purchase information.
+        </p>
+
+        <p>
+            The project followed an Excel analytics workflow from data
+            preparation and calculated fields through Pivot Table analysis,
+            visualization and dashboard creation.
+        </p>
+
+        <p>
+            The main objective was to explore patterns associated with
+            bicycle purchasing behaviour and identify customer segments
+            that showed different purchasing patterns.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Workbook Structure</h2>
+
+        <p>The project workbook is organised into four main sheets:</p>
+
+        <ul>
+            <li><strong>bike_buyers</strong> — original customer dataset</li>
+            <li><strong>Working Sheet</strong> — prepared data and analysis fields</li>
+            <li><strong>Pivot Table</strong> — summary analysis</li>
+            <li><strong>Dashboard</strong> — final visual presentation</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Data Preparation</h2>
+
+        <p>
+            I cleaned and prepared the customer data in Excel before
+            creating the analytical summaries.
+        </p>
+
+        <p>
+            I used conditional logic to create an <strong>Age Bracket</strong>
+            field, grouping customers into Adolescent, Middle Age and Old.
+        </p>
+
+        <p>
+            The prepared data was then used to create Pivot Tables and
+            dashboard visualizations.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Key Findings</h2>
+
+        <div class="finding">
+
+            <h3>Income and Purchase Behaviour</h3>
+
+            <p>
+                Female customers who purchased a bike had an average income
+                of approximately <strong>$65,490</strong>, compared with
+                <strong>$60,274</strong> among female non-buyers.
+            </p>
+
+            <p>
+                Male buyers had an average income of approximately
+                <strong>$62,679</strong>, compared with
+                <strong>$62,308</strong> among male non-buyers.
+            </p>
+
+            <p>
+                The difference between buyers and non-buyers was therefore
+                more noticeable among female customers than male customers
+                in this analysis.
+            </p>
+
+        </div>
+
+        <div class="finding">
+
+            <h3>Commute Distance</h3>
+
+            <p>
+                Purchase behaviour varied across commute-distance groups.
+                Among customers commuting more than 10 miles, only
+                <strong>3 purchased a bike compared with 37 who did not.</strong>
+            </p>
+
+            <p>
+                The 0–1 mile group had 30 purchases and 47 non-purchases,
+                while the 2–5 mile group had 34 purchases and 25
+                non-purchases.
+            </p>
+
+            <p>
+                This suggests that commute distance was associated with
+                different purchasing patterns in the analysed customer
+                records.
+            </p>
+
+        </div>
+
+        <div class="finding">
+
+            <h3>Age Demographics</h3>
+
+            <p>
+                The Middle Age group had the highest purchase rate at
+                <strong>44.3%</strong>, with 89 buyers and 112 non-buyers.
+            </p>
+
+            <p>
+                The Adolescent group had a purchase rate of
+                <strong>20.8%</strong>, while the Old group had a purchase
+                rate of <strong>18.1%</strong>.
+            </p>
+
+        </div>
+
+        <div class="finding">
+
+            <h3>Regional Analysis</h3>
+
+            <p>
+                I used Pivot Tables and dashboard visualizations to explore
+                purchasing behaviour across geographic regions and compare
+                customer purchase patterns between regions.
+            </p>
+
+        </div>
+
+        <div class="finding">
+
+            <h3>Occupational Analysis</h3>
+
+            <p>
+                I also examined purchasing behaviour across occupational
+                categories to identify differences in the number of buyers
+                and non-buyers across professional groups.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Dashboard</h2>
+
+        <p>
+            The final Excel dashboard brings the analysis together through
+            visual summaries of customer purchasing behaviour.
+        </p>
+
+        <p>The dashboard includes visual analysis of:</p>
+
+        <ul>
+            <li>Average income by purchased bike status</li>
+            <li>Customer commute distance</li>
+            <li>Customer age brackets</li>
+            <li>Customer purchasing behaviour</li>
+        </ul>
+
+        <p>
+            Pivot Tables and slicers were used to make the analysis easier
+            to explore and compare across customer segments.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>My Analytics Workflow</h2>
+
+        <div class="workflow">
+
+            <div class="step">
+                <div class="step-number">01 — PREPARE</div>
+                <p>
+                    Cleaned and prepared the customer dataset in Excel.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02 — ENGINEER</div>
+                <p>
+                    Used conditional logic to create analytical fields
+                    such as age brackets.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03 — ANALYSE</div>
+                <p>
+                    Built Pivot Tables to compare customer characteristics
+                    and purchase behaviour.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">04 — VISUALIZE</div>
+                <p>
+                    Created an interactive Excel dashboard to communicate
+                    the findings.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>What I Practised</h2>
+
+        <ul>
+            <li>Cleaning customer data</li>
+            <li>Using conditional logic</li>
+            <li>Creating calculated fields</li>
+            <li>Creating age brackets</li>
+            <li>Building Pivot Tables</li>
+            <li>Summarising data by multiple categories</li>
+            <li>Comparing customer segments</li>
+            <li>Creating charts</li>
+            <li>Building an Excel dashboard</li>
+            <li>Turning analysis into business-oriented findings</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Limitations</h2>
+
+        <p>
+            The analysis is based on the customer records contained in the
+            provided workbook and describes patterns within this dataset.
+        </p>
+
+        <p>
+            The findings show associations between customer characteristics
+            and bicycle purchasing behaviour. They do not establish that
+            income, commute distance, age, region or occupation directly
+            causes a customer to purchase a bicycle.
+        </p>
+
+        <p>
+            Some Pivot Table analyses use the records available in their
+            respective analytical summaries, so individual analysis totals
+            should not automatically be interpreted as representing every
+            record in the original dataset.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Conclusion</h2>
+
+        <p>
+            This project allowed me to practise using Excel as a complete
+            data analysis tool, from data preparation and calculated fields
+            through Pivot Table analysis and dashboard creation.
+        </p>
+
+        <p>
+            It helped me develop practical experience in customer
+            segmentation, exploratory analysis, data visualization and
+            communicating findings through an interactive Excel dashboard.
+        </p>
+
+        <p>
+            It also gave me experience turning a customer dataset into a
+            structured analysis that could be used to explore purchasing
+            patterns and potential customer segments.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Project Repository</h2>
+
+        <p>
+            The complete Excel workbook, including the source data,
+            working sheet, Pivot Tables and dashboard, is available on
+            GitHub.
+        </p>
+
+        <a
+            class="github-button"
+            href="https://github.com/ItumelengKocha/bike-purchase-analysis"
+            target="_blank"
+        >
+            View on GitHub →
+        </a>
+
+    </section>
+
+</main>
+
+<footer>
+    Itumeleng Kocha
+    <br>
+    Healthcare • Data • Learning • Life
+</footer>
+
+</body>
+</html>
